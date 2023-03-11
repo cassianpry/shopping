@@ -1,0 +1,29 @@
+.button {
+  //   display: flex;
+  //   position: relative;
+  //   align-items: center;
+  //   justify-content: center;
+  text-align: center;
+  background: $blue-color;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  height: 48px;
+  width: 100%;
+  margin: 24px 0px 8px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid $blue-color;
+  &:hover {
+    background: $light-blue-color;
+  }
+  .svg__wrap {
+    display: flex;
+    position: absolute;
+    place-items: center;
+    height: 25px;
+    width: 25px;
+    left: 15px;
+  }
+}

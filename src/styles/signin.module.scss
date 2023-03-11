@@ -1,0 +1,133 @@
+.login {
+  display: flex;
+  position: relative;
+  //min-width: 100vh;
+  overflow: hidden;
+  justify-content: center;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__container {
+    padding: 3rem;
+    &:last-of-type {
+      margin-top: 3rem;
+      @media (max-width: 800px) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 420px;
+    .back__svg {
+      svg {
+        display: grid;
+        width: 40px;
+        height: 40px;
+        place-items: center;
+        fill: #222;
+      }
+    }
+
+    h1 {
+      margin-left: 5px;
+      font-weight: 600px;
+      font-size: 50px;
+    }
+
+    span {
+      margin-left: 5px;
+      font-weight: 600px;
+      font-size: 16px;
+      margin-top: 1rem;
+      // a {
+      //   color: $blue-color;
+      //   cursor: pointer;
+      //   border-bottom: 1px solid $blue-color;
+      // }
+    }
+  }
+
+  &__form {
+    margin-top: 1rem;
+    p {
+      color: #96979b;
+    }
+    form {
+      margin-top: 2rem;
+    }
+  }
+
+  .forgot {
+    display: flex;
+    justify-content: right;
+    margin-top: 1rem;
+    //width: fit-content;
+    a {
+      color: $blue-color;
+      margin-bottom: 1rem;
+      &:hover {
+        color: $light-blue-color;
+        border-bottom: 1px solid $light-blue-color;
+      }
+    }
+  }
+  &__social {
+    margin-top: 1rem;
+    .or {
+      position: relative;
+      color: #919191;
+      padding-left: 5rem;
+      &:before,
+      &:after {
+        content: "";
+        width: 84px;
+        height: 1px;
+        background: #66666648;
+        position: absolute;
+        top: 50%;
+      }
+      &:before {
+        left: 314px;
+      }
+      &:after {
+        left: -10px;
+      }
+    }
+    &_wrap {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding-left: 3rem;
+      img {
+        width: 36px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.social__btn {
+  display: flex;
+  border: none;
+  outline: none;
+  width: 290px;
+  height: 50px;
+  border-radius: 50px;
+  align-items: center;
+  padding-left: 5%;
+  gap: 10px;
+  background: transparent;
+  border: 1px solid #66666683;
+  cursor: pointer;
+  &:hover {
+    background-color: #fafafa;
+  }
+}

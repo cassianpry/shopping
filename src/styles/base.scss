@@ -1,0 +1,48 @@
+$shadow-1: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+$light-blue-color: #00b7ff;
+$blue-color: #2f82ff;
+$grey-color: #f8f8f8;
+$light-error-color: #fd010169;
+$error-color: #ed4337;
+
+.btn__primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background: $blue-color;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  width: 60%;
+  border-radius: 5px;
+  padding: 5px 0 5px 0;
+  &:hover {
+    background: #00b7ff;
+  }
+}
+
+.btn__outlined {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background: $grey-color;
+  color: $blue-color;
+  font-weight: 600;
+  cursor: pointer;
+  width: 60%;
+  border-radius: 5px;
+  padding: 5px 0 5px 0;
+  border: 1px solid $blue-color;
+  &:hover {
+    background: #fff;
+    border: 1px solid #00b7ff;
+  }
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
