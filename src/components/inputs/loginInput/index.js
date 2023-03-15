@@ -1,5 +1,13 @@
 import { ErrorMessage, Field, useField } from "formik"
-import { VscAccount, VscLock, VscMail } from "react-icons/vsc"
+import { BsGenderTrans } from "react-icons/bs"
+import { IoCallOutline } from "react-icons/io5"
+import {
+  VscAccount,
+  VscCalendar,
+  VscLock,
+  VscMail,
+  VscPreview,
+} from "react-icons/vsc"
 import styles from "./styles.module.scss"
 
 export default function LoginInput({ icon, type, placeholder, ...props }) {
@@ -16,6 +24,14 @@ export default function LoginInput({ icon, type, placeholder, ...props }) {
         <VscMail />
       ) : icon == "password" ? (
         <VscLock />
+      ) : icon == "gender" ? (
+        <BsGenderTrans />
+      ) : icon == "birthday" ? (
+        <VscCalendar />
+      ) : icon == "document" ? (
+        <VscPreview />
+      ) : icon == "phone" ? (
+        <IoCallOutline />
       ) : (
         ""
       )}
@@ -24,7 +40,6 @@ export default function LoginInput({ icon, type, placeholder, ...props }) {
         name={field.name}
         placeholder={placeholder}
         {...props}
-        {...meta}
       />
       {meta.touched && meta.error && (
         <div className={styles.error__popup}>

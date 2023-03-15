@@ -28,23 +28,24 @@ export default function Copyright({ country }) {
 }
 const data = [
   {
-    name: "Privacy Center",
-    link: "",
+    name: "Institucional",
+    link: "/",
   },
   {
-    name: "Privacy & Cookie Policy",
-    link: "",
+    name: "Politica de Privacidade",
+    link: "/",
   },
   {
-    name: "Manage Cookies",
-    link: "",
+    name: "Politica de entrega",
+    link: "/",
+  },
+
+  {
+    name: "Termos e condições",
+    link: "/",
   },
   {
-    name: "Terms & Conditions",
-    link: "",
-  },
-  {
-    name: "Copyright Notice",
-    link: "",
+    name: "Cookies",
+    link: "/",
   },
 ]

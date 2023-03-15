@@ -6,8 +6,8 @@
   justify-content: center;
 
   @media (max-width: 800px) {
-    flex-direction: column;
-    align-items: center;
+    //flex-direction: column;
+    justify-content: left;
   }
 
   &__container {
@@ -24,7 +24,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     max-width: 420px;
+    @media (max-width: 800px) {
+      max-width: 100%;
+    }
     .back__svg {
       svg {
         display: grid;
@@ -51,21 +55,6 @@
       //   cursor: pointer;
       //   border-bottom: 1px solid $blue-color;
       // }
-    }
-  }
-
-  &__bottom {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    max-width: 420px;
-
-    span {
-      margin-left: 5px;
-      font-weight: 600px;
-      font-size: 16px;
-      margin-top: 3rem;
     }
   }
 
@@ -151,7 +140,6 @@
   color: $blue-color;
   margin-bottom: 1rem;
   cursor: pointer;
-
   &:hover {
     color: $light-blue-color;
     border-bottom: 1px solid $light-blue-color;
