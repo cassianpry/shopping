@@ -9,7 +9,7 @@ import * as Yup from "yup"
 // import Header from "@/components/header"
 
 import styles from "../styles/signup.module.scss"
-import PrimaryButton from "@/components/footer/buttons/PrimaryButton"
+import PrimaryButton from "@/components/buttons/PrimaryButton"
 import Link from "next/link"
 import { getProviders, signIn } from "next-auth/react"
 import DotLoader from "@/components/loaders/dotLoader"

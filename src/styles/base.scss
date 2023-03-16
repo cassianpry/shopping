@@ -48,3 +48,22 @@ $warning-color: #ff851b;
   align-items: center;
   gap: 5px;
 }
+
+.wrap {
+  flex-wrap: wrap;
+}
+.error {
+  padding: 10px;
+  color: $error-color;
+}
+.success {
+  padding: 10px;
+  color: $success-color;
+}
+.scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+  background: #aeaeafa1;
+  border-radius: 5px;
+}

@@ -62,7 +62,14 @@ router.post(async (req, res) => {
       id: addedUser._id.toString(),
     })
     const url = `${process.env.BASE_URL}/activate/${activation_token}`
-    //sendEmail(email, url, "", "Valide a sua conta.", activateEmailTemplate)
+    sendEmail(
+      email,
+      url,
+      name,
+      "",
+      "Valide a sua conta.",
+      activateEmailTemplate
+    )
     await db.disconnectDb()
     res.json({
       message: "Cadastro concluído! Por favor valide sua conta.",

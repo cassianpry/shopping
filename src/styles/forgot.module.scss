@@ -1,0 +1,43 @@
+.forgot {
+  min-height: calc(100vh - 540px);
+  display: grid;
+  place-items: center;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 420px;
+    padding-bottom: 25px;
+  }
+  span {
+    font-weight: 600;
+    font-size: 14px;
+    //padding-left: 10px;
+    a {
+      color: $blue-color;
+      cursor: pointer;
+      border-bottom: 1px solid $blue-color;
+      &:hover {
+        color: $light-blue-color;
+      }
+    }
+  }
+}
+
+.logo {
+  img {
+    width: 170px;
+    margin-top: 10px;
+  }
+}
+
+.error {
+  color: $error-color;
+  padding-top: 15px;
+}
+
+.success {
+  color: $success-color;
+  padding-top: 15px;
+}

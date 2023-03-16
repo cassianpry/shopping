@@ -7,7 +7,7 @@ import * as Yup from "yup"
 // import Header from "@/components/header"
 
 import styles from "../styles/signin.module.scss"
-import PrimaryButton from "@/components/footer/buttons/PrimaryButton"
+import PrimaryButton from "@/components/buttons/PrimaryButton"
 import { BsPerson } from "react-icons/bs"
 import Link from "next/link"
 import { getCsrfToken, getProviders, getSession, signIn } from "next-auth/react"
@@ -121,7 +121,7 @@ export default function signin({ providers, callbackUrl, csrfToken }) {
 
                   <div className={styles.forgot}>
                     <span>Esqueceu a senha?</span>
-                    <Link href="/forget">&nbsp;Recuperar senha</Link>
+                    <Link href="/auth/forgot">&nbsp;Recuperar senha</Link>
                   </div>
                 </Form>
               )}
