@@ -2,6 +2,8 @@ import { useSession, signIn, signOut } from "next-auth/react"
 import Footer from "@/components/footer"
 import Header from "@/components/header"
 import axios from "axios"
+import styles from "@/styles/home.module.scss"
+import Main from "@/components/home/main"
 
 export default function Home({ country }) {
   const { data: session } = useSession()
@@ -9,7 +11,11 @@ export default function Home({ country }) {
   return (
     <>
       <Header country={country} />
-      {session ? "Você esta logado!" : "Você não esta logado!"}
+      <div className={styles.home}>
+        <div className={styles.container}>
+          <Main />
+        </div>
+      </div>
       <Footer country={country} />
     </>
   )

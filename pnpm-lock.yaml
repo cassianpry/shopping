@@ -25,6 +25,7 @@ specifiers:
   redux-persist: ^6.0.0
   redux-thunk: ^2.4.2
   sass: ^1.58.3
+  swiper: ^9.1.1
   yup: ^1.0.2
 
 dependencies:
@@ -52,6 +53,7 @@ dependencies:
   redux-persist: 6.0.0_react@18.2.0+redux@4.2.1
   redux-thunk: 2.4.2_redux@4.2.1
   sass: 1.58.3
+  swiper: 9.1.1
   yup: 1.0.2
 
 packages:
@@ -1776,6 +1778,10 @@ packages:
     dev: false
     optional: true
 
+  /ssr-window/4.0.2:
+    resolution: {integrity: sha512-ISv/Ch+ig7SOtw7G2+qkwfVASzazUnvlDTwypdLoPoySv+6MqlOV10VwPSE6EWkGjhW50lUmghPmpYZXMu/+AQ==}
+    dev: false
+
   /string-width/4.2.3:
     resolution: {integrity: sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==}
     engines: {node: '>=8'}
@@ -1847,6 +1853,13 @@ packages:
     engines: {node: '>=4'}
     dependencies:
       has-flag: 3.0.0
+    dev: false
+
+  /swiper/9.1.1:
+    resolution: {integrity: sha512-D1zArOwI6XCXCYBULPA4jTxpqp5SQtvntjinbXNZwXzj6P3KS51zSWuMarCLXq5oRISay4nX+TuShpxz8qhtbw==}
+    engines: {node: '>= 4.7.0'}
+    dependencies:
+      ssr-window: 4.0.2
     dev: false
 
   /tar/6.1.13:
