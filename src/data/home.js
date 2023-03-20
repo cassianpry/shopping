@@ -247,7 +247,7 @@ export const menuArray = [
     images: [],
   },
   {
-    name: "Brinquedos & Passatempos",
+    name: "Brinquedos",
     link: "",
     subMenu: [
       {

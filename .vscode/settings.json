@@ -1,4 +1,12 @@
 {
   "cSpell.language": "pt-BR,en",
-  "cSpell.words": ["redish", "swiper"]
+  "cSpell.words": [
+    "Aarray",
+    "adminproduct",
+    "btns",
+    "Esports",
+    "redish",
+    "swiper"
+  ],
+  "emmet.includeLanguages": { "javascript": "javascriptreact" }
 }

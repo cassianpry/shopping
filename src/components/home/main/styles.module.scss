@@ -6,10 +6,10 @@
     "menu header header"
     "menu swiper user"
     "menu offers user";
-  @media (max-width: 1232px) {
+  @media (max-width: 1305px) {
     grid-template-columns: 1fr 3fr;
   }
-  @media (max-width: 990px) {
+  @media (max-width: 1065px) {
     grid-template-columns: 80px 3fr;
   }
   @media (max-width: 730px) {
@@ -21,6 +21,7 @@
     .menu {
       width: 100% !important;
       height: fit-content !important;
+      border-radius: 50%;
       &__list {
         display: flex !important;
         flex-direction: row !important;
@@ -33,12 +34,15 @@
     }
   }
   .menu {
+    padding-top: 5px;
     grid-area: menu;
     height: 100%;
+    width: 100%;
     background: #fff;
     border-radius: 10px;
     box-shadow: $shadow-1;
-    @media (max-width: 990px) {
+    box-sizing: 10px;
+    @media (max-width: 1065px) {
       width: 80px;
       svg {
         transform: scale(1.5);
@@ -56,15 +60,14 @@
     }
     &__header {
       width: 100%;
-      height: 35px;
-      background: $grey-color;
-      border-bottom: 1px solid $grey-color;
-      box-shadow: $shadow-2;
-      @media (max-width: 990px) {
+      height: 100%;
+      gap: 10px;
+      @media (max-width: 1065px) {
         display: none !important;
         svg,
         b {
           display: none;
+          cursor: none;
         }
       }
       svg {
@@ -81,11 +84,15 @@
         height: 32px;
         display: flex;
         align-items: center;
+        // span {
+        //   display: flex;
+        //   padding: 0px 20px;
+        //   gap: 15px;
+        // }
         a {
-          padding: 0 20px;
+          padding: 0px 20px;
           display: flex;
           align-items: center;
-          gap: 10px;
           color: #424141;
 
           svg {
@@ -94,18 +101,21 @@
           }
 
           span {
-            @media (max-width: 990px) {
-              display: none;
+            @media (max-width: 1065px) {
+              display: none !important;
             }
           }
         }
       }
     }
     &__li {
-      height: 32px;
-      display: flex;
-      align-items: center;
+      padding-left: 15px;
       cursor: pointer;
+      @media (max-width: 1446px) {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding-left: 0px;
+      }
       &:hover {
         background: $light-blue-color;
         a {
@@ -117,9 +127,6 @@
       }
 
       a {
-        padding: 0 20px;
-        display: flex;
-        align-items: center;
         gap: 10px;
         color: #424141;
         svg {
@@ -127,8 +134,8 @@
           stroke: #8c8484;
         }
         span {
-          @media (max-width: 990px) {
-            display: none;
+          @media (max-width: 1065px) {
+            display: none !important;
           }
         }
       }
@@ -152,6 +159,10 @@
         align-items: center;
         font-size: 19px;
         color: $blue-color;
+        &:hover a {
+          color: $light-blue-color;
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -217,25 +228,23 @@
     background: #fff;
     border-radius: 10px;
     box-shadow: $shadow-1;
-    @media (max-width: 1232px) {
+    @media (max-width: 1305px) {
       display: none;
     }
     &__header {
+      border-radius: 50%;
     }
     &__container {
       padding: 1rem;
     }
     &__infos {
-      position: absolute;
-      top: 1rem;
-      left: 50%;
-      transform: translateX(-50%);
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       img {
-        width: 100px;
-        height: 100px;
+        width: 50px;
+        height: 50px;
         object-fit: cover;
         border-radius: 50%;
         box-shadow: $shadow-1;
@@ -245,61 +254,46 @@
         text-transform: capitalize;
       }
       &_btns {
-        margin-top: 1rem;
         display: flex;
+        margin-top: 1rem;
         align-items: center;
         gap: 1rem;
         button {
           width: 100px;
           height: 35px;
-          border-radius: 10px;
           cursor: pointer;
           font-weight: 600;
-          &:first-of-type {
-            background: linear-gradient($blue-color, #0000ff34);
-            color: #fff;
-          }
-          &:last-of-type {
-            color: #555;
-          }
         }
       }
     }
     &__links {
-      margin-top: 1rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 1rem;
       flex-wrap: wrap;
       li {
+        margin-top: 2rem;
         width: 50px;
         height: 50px;
-        background: $grey-color;
+        //background: $grey-color;
         border-radius: 50%;
         display: grid;
         place-items: center;
         transition: 0.2s;
+        @media (max-width: 1450) {
+          margin-top: 0px;
+        }
+
         svg {
           width: 30px;
           height: 30px;
           stroke: $blue-color;
+          fill: $blue-color;
         }
         &:hover {
-          background: $blue-color;
+          //background: $blue-color;
           svg {
-            stroke: #fff;
-          }
-        }
-        &:nth-of-type(3),
-        &:nth-of-type(4) {
-          svg {
-            fill: $blue-color;
-          }
-          &:hover {
-            svg {
-              fill: #fff;
-            }
+            fill: $light-blue-color;
           }
         }
       }

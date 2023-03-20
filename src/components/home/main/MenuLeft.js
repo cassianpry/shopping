@@ -22,6 +22,7 @@ import { BsPhoneVibrate } from "react-icons/bs"
 //-------
 
 import styles from "./styles.module.scss"
+import { IoGameControllerOutline } from "react-icons/io5"
 
 export default function MenuLeft() {
   return (
@@ -64,7 +65,7 @@ export default function MenuLeft() {
                 ) : i == 12 ? (
                   <BsPhoneVibrate />
                 ) : i == 13 ? (
-                  <MdOutlineSmartToy />
+                  <IoGameControllerOutline />
                 ) : i == 14 ? (
                   <BiGift />
                 ) : i == 15 ? (

@@ -55,7 +55,7 @@ export const sidebarData = [
         filter: "Dispatched",
       },
       {
-        name: "Delievered Orders",
+        name: "Delivered Orders",
         link: "/profile/orders",
         filter: "Completed",
       },
@@ -70,7 +70,7 @@ export const sidebarData = [
     heading: "My Lists",
     links: [
       {
-        name: "Whishlist",
+        name: "Wishlist",
         link: "/profile/wishlist",
       },
       {
@@ -126,7 +126,7 @@ export const sidebarData = [
     heading: "Sign out",
     link: [],
   },
-];
+]
 
 export const ordersLinks = [
   {
@@ -154,11 +154,11 @@ export const ordersLinks = [
     filter: "Dispatched",
   },
   {
-    name: "Delievered Orders",
-    filter: "Delievered",
+    name: "Delivered Orders",
+    filter: "Delivered",
   },
   {
     name: "Cancelled Orders",
     filter: "Cancelled",
   },
-];
+]
