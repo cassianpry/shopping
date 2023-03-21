@@ -82,7 +82,7 @@ export default function UserMenu() {
             }}
           >
             {userSwiperArray.map((item) => (
-              <SwiperSlide>
+              <SwiperSlide key={item.id}>
                 <Link href="">
                   <img src={item.image} alt="" />
                 </Link>

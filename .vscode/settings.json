@@ -4,9 +4,15 @@
     "Aarray",
     "adminproduct",
     "btns",
+    "calcaulate",
+    "dayjs",
+    "emojitwo",
     "Esports",
+    "Improv",
     "redish",
-    "swiper"
+    "simillar",
+    "swiper",
+    "timestam"
   ],
   "emmet.includeLanguages": { "javascript": "javascriptreact" }
 }

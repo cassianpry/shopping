@@ -100,7 +100,7 @@
   width: 280px;
   top: 100%;
   right: 0;
-  background: #fff;
+  background: $white-color;
   z-index: 99;
   gap: 1rem;
   padding: 1rem 0;
@@ -218,6 +218,6 @@
     display: grid;
     place-items: center;
     font-weight: 600;
-    color: #fff;
+    color: $white-color;
   }
 }

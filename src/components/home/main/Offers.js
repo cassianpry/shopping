@@ -31,7 +31,7 @@ export default function Offers() {
         className="offers_swiper"
       >
         {offersAarray.map((offer) => (
-          <SwiperSlide key={offer.image}>
+          <SwiperSlide key={offer.id}>
             <Link href="">
               <img src={offer.image} alt="" />
             </Link>

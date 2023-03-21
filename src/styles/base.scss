@@ -1,6 +1,8 @@
-$light-blue-color: #00b7ff;
+$white-color: #fff;
 $blue-color: #2f82ff;
-$grey-color: #f8f8f8;
+$light-blue-color: #00b7ff;
+$gray-color: #f8f8f8;
+$dark-gray-color: #393d47;
 $yellow-color: #fac80f;
 $violet-color: #5a31f4;
 $redish-color: #f15f6f;
@@ -14,7 +16,7 @@ $cubic-bezier: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
 .container {
   max-width: 1550px;
-  margin: 0 auto;
+  margin: 0px auto;
   padding: 1rem;
 }
 
@@ -24,7 +26,7 @@ $cubic-bezier: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   justify-content: center;
   gap: 5px;
   background: $blue-color;
-  color: #fff;
+  color: $white-color;
   font-weight: 600;
   cursor: pointer;
   width: 60%;
@@ -40,7 +42,7 @@ $cubic-bezier: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   align-items: center;
   justify-content: center;
   gap: 5px;
-  background: $grey-color;
+  background: $gray-color;
   color: $blue-color;
   font-weight: 600;
   cursor: pointer;
@@ -49,7 +51,7 @@ $cubic-bezier: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   padding: 5px 0 5px 0;
   border: 1px solid $blue-color;
   &:hover {
-    background: #fff;
+    background: $white-color;
     border: 1px solid #00b7ff;
   }
 }
@@ -88,7 +90,8 @@ $cubic-bezier: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  background: $white-color;
+  border-radius: 10px;
 
   /* Center slide text vertically */
   display: -webkit-box;
@@ -193,7 +196,7 @@ $cubic-bezier: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
   .swiper-slide {
     font-size: 18px;
-    background: #fff;
+    background: $white-color;
     //     /* Center slide text vertically */
     // display: -webkit-box;
     // display: -ms-flexbox;
@@ -218,7 +221,7 @@ $cubic-bezier: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
     span {
       position: absolute;
-      color: #fff;
+      color: $white-color;
       &:first-of-type {
         right: 5px;
         bottom: 10px;
@@ -272,7 +275,7 @@ $cubic-bezier: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     border-radius: 18px;
     font-size: 22px;
     font-weight: bold;
-    color: #fff;
+    color: $white-color;
     img {
       height: 240px !important;
     }
@@ -299,7 +302,7 @@ $cubic-bezier: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 .products__swiper {
   .swiper-button-next,
   .swiper-button-prev {
-    background: #fff;
+    background: $white-color;
     width: 40px;
     height: 40px;
     border-radius: 50%;
