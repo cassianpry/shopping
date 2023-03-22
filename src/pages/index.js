@@ -7,7 +7,15 @@ import FlashDeals from "@/components/home/flashDeals"
 
 import styles from "@/styles/home.module.scss"
 import Category from "@/components/home/category"
-import { women_dresses, women_accessories, women_shoes } from "@/data/home"
+import {
+  women_dresses,
+  women_accessories,
+  women_shoes,
+  women_swiper,
+  gamingSwiper,
+  homeImprovSwiper,
+} from "@/data/home"
+import ProductsSwiper from "@/components/productSwiper"
 
 export default function Home({ country }) {
   const { data: session } = useSession()
@@ -40,6 +48,22 @@ export default function Home({ country }) {
               link=""
             />
           </div>
+          <ProductsSwiper
+            header="Para Mulheres"
+            products={women_swiper}
+            background="	#9F2B68"
+          />
+          <ProductsSwiper
+            header="Tudo para jogos"
+            products={gamingSwiper}
+            background="#228B22"
+          />
+
+          <ProductsSwiper
+            header="Para sua Casa"
+            products={homeImprovSwiper}
+            background="#CD7F32"
+          />
         </div>
       </div>
       <Footer country={country} />

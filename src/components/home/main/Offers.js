@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import { offersAarray } from "@/data/home"
 // Import Swiper styles
 import "swiper/css"
-import "swiper/css/pagination"
+import "swiper/css/navigation"
 import styles from "./styles.module.scss"
 
 import { Pagination, Navigation } from "swiper"
