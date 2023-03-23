@@ -36,9 +36,11 @@ export default function ProductsSwiper({ header, products, background }) {
               </div>
               <div className={styles.product__infos}>
                 <h1>
-                  {product.name.length > 20
-                    ? `${product.name.slice(0, 20)}...`
-                    : product.name}
+                  {product.name.length > 55 ? (
+                    `${product.name.slice(0, 20)}...`
+                  ) : (
+                    <span>{product.name}</span>
+                  )}
                 </h1>
                 <span>
                   {product.price &&

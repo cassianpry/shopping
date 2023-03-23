@@ -1,5 +1,6 @@
-import mongoose from "mongoose";
-const { ObjectId } = mongoose.Schema;
+import mongoose from "mongoose"
+const { ObjectId } = mongoose.Schema
+
 const reviewSchema = new mongoose.Schema({
   reviewBy: {
     type: ObjectId,
@@ -27,7 +28,8 @@ const reviewSchema = new mongoose.Schema({
   },
   images: [],
   likes: [],
-});
+})
+
 const productSchema = new mongoose.Schema(
   {
     name: {
@@ -124,8 +126,8 @@ const productSchema = new mongoose.Schema(
   {
     timestamps: true,
   }
-);
+)
 const Product =
-  mongoose.models.Product || mongoose.model("Product", productSchema);
+  mongoose.models.Product || mongoose.model("Product", productSchema)
 
-export default Product;
+export default Product

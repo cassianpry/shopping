@@ -41,7 +41,7 @@ function Top({ country }) {
           </li>
           <li className={styles.li}>
             <BsSuitHeart />
-            <Link href="/profile/whishlist">
+            <Link href="/profile/wishlist">
               <span>Lista de Desejos</span>
             </Link>
           </li>

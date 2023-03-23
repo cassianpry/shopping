@@ -13,7 +13,7 @@ export default function Category({ header, products, link, background }) {
       </div>
       <div className={styles.category__products}>
         {products?.map((product) => (
-          <div className={styles.product}>
+          <div className={styles.product} key={product.id}>
             <img src={product.image} alt="" />
           </div>
         ))}

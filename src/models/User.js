@@ -48,7 +48,7 @@ const userSchema = new mongoose.Schema(
     },
     gender: {
       type: String,
-      required: "Por favor preencher o genero.",
+      required: "Por favor preencher o gênero.",
     },
     address: [
       {
