@@ -2,10 +2,13 @@
   "cSpell.language": "pt-BR,en",
   "cSpell.words": [
     "Aarray",
+    "Accordian",
     "adminproduct",
     "btns",
     "calcaulate",
+    "choosed",
     "dayjs",
+    "describedby",
     "emojitwo",
     "Esports",
     "formated",
@@ -16,7 +19,10 @@
     "styless",
     "Styless",
     "swiper",
-    "timestam"
+    "timestam",
+    "Whishlist"
   ],
-  "emmet.includeLanguages": { "javascript": "javascriptreact" }
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  }
 }

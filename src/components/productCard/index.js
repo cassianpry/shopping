@@ -1,7 +1,7 @@
-import Link from "next/link"
-import { useState, useEffect } from "react"
-import ProductCardSwiper from "./ProductCardSwiper"
-import styles from "./styles.module.scss"
+import Link from 'next/link'
+import { useState, useEffect } from 'react'
+import ProductCardSwiper from './ProductCardSwiper'
+import styles from './styles.module.scss'
 
 export default function ProductCard({ product }) {
   const [active, setActive] = useState(0)
@@ -40,7 +40,7 @@ export default function ProductCard({ product }) {
     <div className={styles.product}>
       <div className={styles.product__container}>
         <Link href={`/product/${product.slug}?style=${active}`}>
-          <div className="">
+          <div className=''>
             <ProductCardSwiper images={images} />
           </div>
         </Link>
@@ -54,32 +54,32 @@ export default function ProductCard({ product }) {
 
           <span>
             {prices.length === 1
-              ? prices[0].toLocaleString("pt-br", {
-                  style: "currency",
-                  currency: "BRL",
+              ? prices[0].toLocaleString('pt-br', {
+                  style: 'currency',
+                  currency: 'BRL',
                 })
               : prices[prices.length - 1] - prices[0] == 0
-              ? "R$0,00"
+              ? 'R$0,00'
               : (prices[prices.length - 1] - prices[0]).toLocaleString(
-                  "pt-br",
+                  'pt-br',
                   {
-                    style: "currency",
-                    currency: "BRL",
+                    style: 'currency',
+                    currency: 'BRL',
                   }
                 )}
           </span>
           {product.subProducts[active].discount === 0 ? (
-            <div className={styles.discount} style={{ fontWeight: "600" }}>
+            <div className={styles.discount} style={{ fontWeight: '600' }}>
               Gratuito
             </div>
           ) : (
             <div
               className={styles.discount}
-              style={{ fontSize: "18px", fontWeight: "600" }}
+              style={{ fontSize: '18px', fontWeight: '600' }}
             >
-              {product.subProducts[active].discount.toLocaleString("pt-br", {
-                style: "currency",
-                currency: "BRL",
+              {product.subProducts[active].discount.toLocaleString('pt-br', {
+                style: 'currency',
+                currency: 'BRL',
               })}
             </div>
           )}
@@ -95,7 +95,7 @@ export default function ProductCard({ product }) {
                       setImages(product.subProducts[i].images)
                       setActive(i)
                     }}
-                    alt=""
+                    alt=''
                   />
                 ) : (
                   <span
