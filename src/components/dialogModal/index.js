@@ -19,7 +19,7 @@ export default function DialogModal({ type }) {
   const dispatch = useDispatch()
   const { dialog } = useSelector((state) => ({ ...state }))
   //const test = dialog.msgs.find((x) => x.type == 'error')
-  console.log(dialog)
+
   const handleClose = () => {
     dispatch(hideDialog())
   }

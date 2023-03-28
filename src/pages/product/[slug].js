@@ -9,6 +9,7 @@ import SubCategory from '@/models/SubCategory'
 import MainSwiper from '@/components/productPage/MainSwiper'
 import { useState } from 'react'
 import Infos from '@/components/productPage/Infos'
+import Reviews from '@/components/productPage/reviews'
 
 export default function Products({ product }) {
   const [activeImage, setActiveImg] = useState('')
@@ -30,6 +31,7 @@ export default function Products({ product }) {
             <MainSwiper images={product.images} activeImage={activeImage} />
             <Infos product={product} setActiveImg={setActiveImg} />
           </div>
+          <Reviews product={product} />
         </div>
       </div>
       {/* <Footer country='' /> */}
@@ -71,7 +73,13 @@ export async function getServerSideProps(context) {
     }),
     priceRange:
       prices.length > 1
-        ? `De ${prices[0]} por ${prices[prices.length - 1]}`
+        ? `De ${prices[prices.length - 1].toLocaleString('pt-br', {
+            style: 'currency',
+            currency: 'BRL',
+          })} por ${prices[0].toLocaleString('pt-br', {
+            style: 'currency',
+            currency: 'BRL',
+          })}`
         : '',
     //prettier-ignore
     price:
@@ -91,10 +99,59 @@ export async function getServerSideProps(context) {
       currency: 'BRL',
     }),
     quantity: subProduct.sizes[size].qty,
+    ratings: [
+      {
+        percentage: calculatePercentage('5'),
+      },
+      {
+        percentage: calculatePercentage('4'),
+      },
+      {
+        percentage: calculatePercentage('3'),
+      },
+      {
+        percentage: calculatePercentage('2'),
+      },
+      {
+        percentage: calculatePercentage('1'),
+      },
+    ],
+    reviews: product.reviews.reverse(),
+    allSizes: product.subProducts
+      .map((p) => {
+        return p.sizes
+      })
+      .flat()
+      .sort((a, b) => {
+        return a.size - b.size
+      })
+      .filter(
+        (element, index, array) =>
+          array.findIndex((el2) => el2.size === element.size) === index
+      ),
+  }
+
+  const related = await Product.find({ category: product.category._id }).lean()
+
+  function calculatePercentage(num) {
+    return (
+      (product.reviews.reduce((a, review) => {
+        return (
+          a +
+          (review.rating == Number(num) || review.rating == Number(num) + 0.5)
+        )
+      }, 0) *
+        100) /
+      product.reviews.length
+    ).toFixed(1)
   }
   db.disconnectDb()
+  console.log('related==>', related)
 
   return {
-    props: { product: JSON.parse(JSON.stringify(newProduct)) },
+    props: {
+      product: JSON.parse(JSON.stringify(newProduct)),
+      related: JSON.parse(JSON.stringify(related)),
+    },
   }
 }

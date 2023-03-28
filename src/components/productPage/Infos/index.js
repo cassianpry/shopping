@@ -30,15 +30,18 @@ export default function Infos({ product, setActiveImg }) {
   useEffect(() => {
     dispatch(hideDialog())
   }, [])
+
   useEffect(() => {
     setSize('')
     setQty(1)
   }, [router.query.style])
+
   useEffect(() => {
     if (qty > product.quantity) {
       setQty(product.quantity)
     }
   }, [router.query.size])
+
   const addToCartHandler = async () => {
     if (!router.query.size) {
       setError('Escolha um tamanho')
@@ -115,7 +118,10 @@ export default function Infos({ product, setActiveImg }) {
       {/* <DialogModal /> */}
       <div className={styles.infos__container}>
         <h1 className={styles.infos__name}>{product.name}</h1>
-        <h2 className={styles.infos__sku}>{product.sku}</h2>
+        <h2 className={styles.infos__sku}>
+          <span style={{ fontWeight: 'bold' }}>SKU: </span>
+          {product.sku}
+        </h2>
         <div className={styles.infos__rating}>
           <Rating
             name='half-rating-read'
@@ -125,14 +131,14 @@ export default function Infos({ product, setActiveImg }) {
             style={{ color: '#FACF19' }}
           />
           ({product.numReviews}
-          {product.numReviews == 1 ? ' review' : ' reviews'})
+          {product.numReviews == 1 ? ' avaliação' : ' avaliações'})
         </div>
         <div className={styles.infos__price}>
-          {!size ? <h2>{product.priceRange}</h2> : <h1>{product.price}$</h1>}
+          {!size ? <h2>{product.priceRange}</h2> : <h1>{product.price}</h1>}
           {product.discount > 0 ? (
             <h3>
               {size && <span>{product.priceBefore}</span>}
-              <span>(-{product.discount}%)</span>
+              <span>{product.discount}</span>
             </h3>
           ) : (
             ''
@@ -150,7 +156,7 @@ export default function Infos({ product, setActiveImg }) {
           disponíveis.
         </span>
         <div className={styles.infos__sizes}>
-          <h4>Select a Size : </h4>
+          <h4>Tamanhos: </h4>
           <div className={styles.infos__sizes_wrap}>
             {product.sizes.map((size, i) => (
               <Link
