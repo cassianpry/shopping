@@ -10,9 +10,11 @@ import MainSwiper from '@/components/productPage/MainSwiper'
 import { useState } from 'react'
 import Infos from '@/components/productPage/Infos'
 import Reviews from '@/components/productPage/reviews'
+import User from '@/models/User'
 
 export default function Products({ product }) {
   const [activeImage, setActiveImg] = useState('')
+
   return (
     <>
       <Head>
@@ -49,6 +51,8 @@ export async function getServerSideProps(context) {
   let product = await Product.findOne({ slug })
     .populate({ path: 'category', model: Category })
     .populate({ path: 'subCategories._id', model: SubCategory })
+    .lean()
+    .populate({ path: 'reviews.reviewBy', model: User })
     .lean()
   let subProduct = product.subProducts[style]
   let prices =
